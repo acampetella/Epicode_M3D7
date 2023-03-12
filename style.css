@@ -1,0 +1,40 @@
+.ball {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(217, 35, 132);
+    border-radius: 50%;
+    position: absolute;
+    left: 400px;
+    top: 50px;
+    animation-name: rimbalzo;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.shadow {
+    width: 80px;
+    height: 10px;
+    border-radius: 40px/5px;
+    background-color: lightgray;
+    opacity: 0.2;
+    position: absolute;
+    left: 400px;
+    top: 640px;
+    animation-name: ombra;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(1.0, 0.0, 0.0, 1.0);
+    animation-iteration-count: infinite;
+}
+
+@keyframes rimbalzo {
+    0% {top: 50px;}
+    50% {top: 600px; height: 50px;}
+    100% {top: 50px;}
+}
+
+@keyframes ombra {
+    0% {opacity: 0.2;}
+    50% {opacity: 0;}
+    100% {opacity: 0.2;}
+}
